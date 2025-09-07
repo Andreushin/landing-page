@@ -1,301 +1,237 @@
 <!doctype html>
 <html lang="es">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Andy's Closet – Nueva colección Sonrisas en Tela</title>
-<meta name="description" content="Filipinas personalizables. Envío 24h, cambios en 3 días. Cotizaciones al mayoreo." />
-<meta name="keywords" content="filipinas médicas, ropa profesional, uniformes médicos, Estampados divertidos" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Andy's Closet – Nueva colección Sonrisas en Tela</title>
+    <meta name="description" content="Filipinas personalizables. Envío 24h, cambios en 3 días. Cotizaciones al mayoreo." />
+    <meta name="keywords" content="filipinas médicas, ropa profesional, uniformes médicos, Estampados divertidos" />
+    <link rel="stylesheet" href="main.css">
+  </head>
 
+  <body>
+    <div class="wrap">
 
-  <style>
-    :root{
-      --primary: #0E6BA8; /* azul claro */
-      --accent: #0FB3D8;  /* agua */
-      --bg: #FFFFFF;
-      --text: #213547;
-      --muted-border: #E6EEF2;
-      --card-shadow: 0 6px 18px rgba(14,107,168,0.06);
-      --radius: 10px;
-      --gap: 16px;
-      --max-width: 1100px;
-      --container-padding: 20px;
-    }
-
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
-
-    a{color:var(--accent);text-decoration:none}
-    img{max-width:100%;display:block}
-
-    /* Layout */
-    .wrap{max-width:var(--max-width);margin:0 auto;padding:28px var(--container-padding)}
-    .topbar{display:flex;justify-content:space-between;align-items:center;font-size:14px;padding:8px 0}
-    .topbar a{font-weight:600}
-
-    header{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
-    .brand{font-weight:800;font-size:20px;color:var(--primary)}
-    .brand span{color:var(--accent)}
-    nav{display:none}
-    .actions{display:flex;gap:10px;align-items:center}
-    .btn{border-radius:8px;padding:10px 14px;border:1px solid var(--muted-border);background:white;cursor:pointer}
-    .btn-primary{background:var(--primary);color:#fff;border-color:var(--primary)}
-    .btn-accent{background:var(--accent);color:#fff;border-color:var(--accent)}
-
-    /* Hero */
-    .hero{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;padding:18px 0}
-    .hero h1{font-size:28px;margin:0;color:var(--primary)}
-    .hero p{margin:12px 0 0;color:var(--text);line-height:1.5}
-    .hero-ctas{display:flex;gap:12px;margin-top:16px}
-    .hero-ctas .btn{padding:12px 18px}
-
-    .hero-media{position:relative}
-    .hero-badge{position:absolute;left:12px;bottom:-18px;background:white;padding:8px;border-radius:8px;border:1px solid var(--muted-border);box-shadow:var(--card-shadow);width:200px}
-    .trust{margin-top:28px;padding:12px;border-radius:10px;display:flex;gap:12px;align-items:center;justify-content:space-between;background:#fff;box-shadow:var(--card-shadow)}
-
-    /* Product + aside */
-    main{display:grid;grid-template-columns:1fr;gap:24px;margin-top:28px}
-    .product{background:#fff;padding:18px;border-radius:10px;box-shadow:var(--card-shadow)}
-    .thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-    .thumb{border:1px solid var(--muted-border);border-radius:8px;overflow:hidden}
-
-    .specs{margin-top:16px}
-
-    aside.purchase{background:#fff;padding:18px;border-radius:10px;box-shadow:var(--card-shadow)}
-    aside .price{color:var(--primary);font-weight:700;font-size:20px}
-    .sizes{display:flex;gap:8px;margin-top:10px}
-    .size{border:1px solid var(--muted-border);padding:8px 10px;border-radius:8px;background:white;cursor:pointer}
-
-    .colors{display:flex;gap:8px;margin-top:10px;align-items:center}
-    .color-swatch{width:32px;height:32px;border-radius:50%;border:1px solid var(--muted-border)}
-
-    .purchase .cta{display:flex;flex-direction:column;gap:10px;margin-top:16px}
-
-    /* Benefits */
-    .benefits{display:grid;grid-template-columns:1fr;gap:12px;margin-top:20px}
-    .benefit-card{background:#fff;padding:18px;border-radius:10px;box-shadow:var(--card-shadow)}
-
-    /* Testimonials */
-    .testimonials{background:#fff;padding:18px;border-radius:10px;box-shadow:var(--card-shadow);margin-top:20px}
-    .quote{border-left:4px solid var(--accent);padding:12px;background:#F6FBFD}
-
-    /* B2B form */
-    .b2b{background:#fff;padding:18px;border-radius:10px;box-shadow:var(--card-shadow);margin-top:20px}
-    .b2b input, .b2b textarea{width:100%;padding:10px;border:1px solid var(--muted-border);border-radius:8px}
-    .b2b .btn-submit{background:var(--accent);color:#fff;border-color:var(--accent);padding:10px}
-
-    /* FAQs & Footer */
-    .faq-grid{display:grid;grid-template-columns:1fr;gap:12px}
-    .faq{background:#fff;padding:18px;border-radius:10px;box-shadow:var(--card-shadow)}
-
-    footer{margin-top:28px;padding:20px;border-radius:8px;background:var(--primary);color:white}
-
-    /* Sticky mobile CTA */
-    .mobile-stick{display:none}
-
-    /* Desktop styles */
-    @media(min-width:900px){
-      nav{display:block}
-      .hero{grid-template-columns:1fr 1fr}
-      main{grid-template-columns:2fr 1fr}
-      .benefits{grid-template-columns:repeat(3,1fr)}
-      .faq-grid{grid-template-columns:repeat(3,1fr)}
-      .mobile-stick{display:none}
-    }
-
-    /* Mobile tweaks */
-    @media(max-width:899px){
-      .wrap{padding:16px}
-      .mobile-stick{display:block;position:fixed;left:50%;transform:translateX(-50%);bottom:14px;width:94%;z-index:60}
-      .mobile-stick .bar{background:var(--primary);color:#fff;padding:12px;border-radius:12px;display:flex;align-items:center;justify-content:space-between;box-shadow:var(--card-shadow)}
-    }
-
-  </style>
-</head>
-<body>
-
-  <div class="wrap">
-    <div class="topbar">
-      <div>Plateria, accesorios y uniformes para personal de salud · Garantia de 3 días</div>
-      <div><a href="#" onclick="openWhatsApp()">WhatsApp</a> · <a href="#">Facebook</a></div>
-    </div>
-
-    <header>
-      <div class="brand">Andy's <span>Closet</span></div>
-
-      <nav>
-        <a href="#modelos">Modelos</a> &nbsp; • &nbsp;
-        <a href="#Personalizacion">Personalizacion</a> &nbsp; • &nbsp;
-        <a href="#mayoreo">Mayoreo</a> &nbsp; • &nbsp;
-        <a href="#sobre">Sobre nosotros</a>
-      </nav>
-
-      <div class="actions">
-        <button class="btn btn-accent" onclick="scrollToB2B()">Cotizar al mayoreo</button>
-        <button class="btn">Favoritos</button>
-      </div>
-    </header>
-
-    <section class="hero">
-      <div>
-        <h1>Filipinas profesionales  — cómodas y resistentes</h1>
-        <p>Perfectas para doctores, dentistas, masajistas y veterinarios. Corte moderno, tejido que respira y fácil cuidado.</p>
-
-        <div class="hero-ctas">
-          <button class="btn btn-primary" onclick="openWhatsAppPrefill()">Comprar ahora</button>
-          <button class="btn" onclick="scrollToB2B()">Cotizar al mayoreo</button>
-        </div>
-
-        <div class="trust" aria-hidden>
-          <div style="display:flex;gap:10px;align-items:center"><strong>+500 ventas</strong><span>Pago seguro</span><span>Envío 24h</span><span>Garantía 3 días</span></div>
-          <div style="font-size:13px;color:var(--text)">¿Tienes dudas? Escríbenos por WhatsApp y te atendemos ya.</div>
+      <div class="topbar">
+        <div>Plateria, accesorios y uniformes para personal de salud · Garantia de 3 días</div>
+        <div>
+          <a href="#" onclick="openWhatsApp()">WhatsApp</a> · 
+          <a href="#">Facebook</a>
         </div>
       </div>
 
-      <div class="hero-media">
-        <img srcset="img\hero.png" alt="Estampado memo ocean"  style="border-radius:12px; width:100%; height:auto; object-fit:cover;">
-        <div class="hero-badge">
-          <div style="font-size:12px;color:var(--text)">Modelo</div>
-          <div style="font-weight:700;color:var(--text)">Sonrisas en tela — Estampado memo</div>
-        </div>
-      </div>
-    </section>
+      <header>
+        <div class="brand">Andy's <span>Closet</span></div>
 
-    <main>
-      <section class="product">
-        <div class="thumbs" aria-hidden>
-          <div class="thumb"><img src="img/thinker.png" alt="Estampado thinker Bell"></div>
-          <div class="thumb"><img src="img/batmann.png" alt="Estampado Batman"></div>
-          <div class="thumb"><img src="img/moana.png" alt="espalda"></div>
-        </div>
+        <nav>
+          <a href="#modelos">Modelos</a> &nbsp; • &nbsp;
+          <a href="#Personalizacion">Personalizacion</a> &nbsp; • &nbsp;
+          <a href="#mayoreo">Mayoreo</a> &nbsp; • &nbsp;
+          <a href="#sobre">Sobre nosotros</a>
+        </nav>
 
-        <div class="specs">
-          <h3>Especificaciones</h3>
-          <ul>
-            <li>Tejido transpirable 65% poliéster / 35% algodón</li>
-            <li>Antimanchas y fácil lavado</li>
-            <li>Corte slim que da presencia</li>
-          </ul>
+        <div class="actions">
+          <button class="btn btn-accent" onclick="scrollToB2B()">Cotizar al mayoreo</button>
+          <button class="btn">Favoritos</button>
         </div>
+      </header>
 
-        <div style="margin-top:18px">
-          <h3>Preguntas frecuentes</h3>
-          <div><strong>Tallas:</strong> Sujetas a disponibilidad. <br><strong>Devoluciones:</strong> Cambios en 3 días si no te queda.</div>
-        </div>
+      <section class="hero">
+        <div>
+          <h1>Filipinas profesionales — cómodas y resistentes</h1>
+          <p>Perfectas para doctores, dentistas, masajistas y veterinarios. Corte moderno, tejido que respira y fácil cuidado.</p>
 
-        <div class="benefits" style="margin-top:20px">
-          <div class="benefit-card"><strong>Confort todo el turno</strong><p style="margin:8px 0;color:var(--text)">Tela que respira y cortes pensados para movimiento.</p></div>
-          <div class="benefit-card"><strong>Imagen profesional</strong><p style="margin:8px 0;color:var(--text)">Cortes y colores pensados para dar presencia en consulta.</p></div>
-          <div class="benefit-card"><strong>Fácil cuidado</strong><p style="margin:8px 0;color:var(--text)">Antimanchas y lavado sencillo para uso diario.</p></div>
-        </div>
+          <div class="hero-ctas">
+            <button class="btn btn-primary" onclick="openWhatsAppPrefill()">Comprar ahora</button>
+            <button class="btn" onclick="scrollToB2B()">Cotizar al mayoreo</button>
+          </div>
 
-        <div class="testimonials">
-          <h3>Resenas y testimonios de nuestros clientes </h3>
-          <div style="display:grid;grid-template-columns:1fr;gap:10px;margin-top:12px">
-            <div class="quote">“La tela respira bien y me da mucha libertad por su elasticidad.” — Claudia, Doctora</div>
-            <div class="quote">“Material resistente y cómodo para turnos largos.” — Ana, Enfermera</div>
-            <div class="quote">“Los diseños son únicos. Ya me preguntan dónde los compré.” — Sofía, Enfermera quirúrgica</div>
+          <div class="trust" aria-hidden>
+            <div style="display:flex;gap:10px;align-items:center">
+              <strong>+500 ventas</strong>
+              <span>Pago seguro</span>
+              <span>Envío 24h</span>
+              <span>Garantía 3 días</span>
+            </div>
+            <div style="font-size:13px;color:var(--text)">
+              ¿Tienes dudas? Escríbenos por WhatsApp y te atendemos ya.
+            </div>
           </div>
         </div>
 
+        <div class="hero-media">
+          <img srcset="img/hero.png" alt="Estampado memo ocean"
+               style="border-radius:12px; width:100%; height:auto; object-fit:cover;">
+          <div class="hero-badge">
+            <div style="font-size:12px;color:var(--text)">Modelo</div>
+            <div style="font-weight:700;color:var(--text)">Sonrisas en tela — Estampado memo</div>
+          </div>
+        </div>
       </section>
 
-      <aside class="purchase">
-        <div style="font-size:13px;color:var(--text)">SKU: FP-CL-001</div>
-        <h2 style="margin-top:6px">Nueva Coleccion — Sonrisas en tela</h2>
-        <div class="price" style="margin-top:8px">$699 MXN</div>
+      <main>
+        <section class="product">
+          <div class="thumbs" aria-hidden>
+            <div class="thumb"><img src="img/thinker.png" alt="Estampado thinker Bell"></div>
+            <div class="thumb"><img src="img/batmann.png" alt="Estampado Batman"></div>
+            <div class="thumb"><img src="img/moana.png" alt="espalda"></div>
+          </div>
 
-        <div style="margin-top:12px">
-          <label class="sr-only">Talla</label>
-          <div class="sizes">
-            <button class="size">S</button>
-            <button class="size">M</button>
-            <button class="size">L</button>
-            <button class="size">XL</button>
+          <div class="specs">
+            <h3>Especificaciones</h3>
+            <ul>
+              <li>Tejido transpirable 65% poliéster / 35% algodón</li>
+              <li>Antimanchas y fácil lavado</li>
+              <li>Corte slim que da presencia</li>
+            </ul>
+          </div>
+
+          <!-- TABLA DE TALLAS -->
+          <div class="size-guide mt-18">
+            <h3>Guía de Tallas</h3>
+            <div class="table-wrapper">
+              <table class="table-sizes">
+                <thead>
+                  <tr>
+                    <th>Talla</th>
+                    <th>Busto (cm)</th>
+                    <th>Cintura (cm)</th>
+                    <th>Cadera (cm)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>S</td><td>82-88</td><td>66-72</td><td>90-96</td></tr>
+                  <tr><td>M</td><td>88-94</td><td>72-78</td><td>96-102</td></tr>
+                  <tr><td>L</td><td>94-100</td><td>78-84</td><td>102-108</td></tr>
+                  <tr><td>XL</td><td>100-106</td><td>84-90</td><td>108-114</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">*Las medidas son aproximadas y pueden variar ligeramente según el modelo.</p>
+          </div>
+          <!-- FIN TABLA DE TALLAS -->
+
+          <div style="margin-top:18px">
+            <h3>Preguntas frecuentes</h3>
+            <div>
+              <strong>Tallas:</strong> Sujetas a disponibilidad. <br>
+              <strong>Devoluciones:</strong> Cambios en 3 días si no te queda.
+            </div>
+          </div>
+
+          <div class="benefits" style="margin-top:20px">
+            <div class="benefit-card">
+              <strong>Confort todo el turno</strong>
+              <p style="margin:8px 0;color:var(--text)">
+                Tela que respira y cortes pensados para movimiento.
+              </p>
+            </div>
+            <div class="benefit-card">
+              <strong>Imagen profesional</strong>
+              <p style="margin:8px 0;color:var(--text)">
+                Cortes y colores pensados para dar presencia en consulta.
+              </p>
+            </div>
+            <div class="benefit-card">
+              <strong>Fácil cuidado</strong>
+              <p style="margin:8px 0;color:var(--text)">
+                Antimanchas y lavado sencillo para uso diario.
+              </p>
+            </div>
+          </div>
+
+          <div class="testimonials">
+            <h3>Reseñas y testimonios de nuestros clientes</h3>
+            <div style="display:grid;grid-template-columns:1fr;gap:10px;margin-top:12px">
+              <div class="quote">“La tela respira bien y me da mucha libertad por su elasticidad.” — Claudia, Doctora</div>
+              <div class="quote">“Material resistente y cómodo para turnos largos.” — Ana, Enfermera</div>
+              <div class="quote">“Los diseños son únicos. Ya me preguntan dónde los compré.” — Sofía, Enfermera quirúrgica</div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="purchase">
+          <div style="font-size:13px;color:var(--text)">SKU: FP-CL-001</div>
+          <h2 style="margin-top:6px">Nueva Colección — Sonrisas en tela</h2>
+          <div class="price" style="margin-top:8px">$699 MXN</div>
+
+          <div style="margin-top:12px">
+            <label class="sr-only">Talla</label>
+            <div class="sizes">
+              <button class="size">S</button>
+              <button class="size">M</button>
+              <button class="size">L</button>
+              <button class="size">XL</button>
+            </div>
+          </div>
+
+          <div style="margin-top:12px">
+            <label class="sr-only">Color</label>
+            <div class="colors">
+              <div class="color-swatch" style="background:var(--primary)"></div>
+              <div class="color-swatch" style="background:#cb4c7d"></div>
+              <div class="color-swatch" style="background:#111827"></div>
+            </div>
+          </div>
+
+          <div class="cta">
+            <button class="btn btn-primary" onclick="openWhatsAppPrefill()">Comprar con WhatsApp</button>
+            <button class="btn" onclick="alert('Integrar pasarela de pago o link de pago')">Añadir a favoritos</button>
+          </div>
+
+          <div style="margin-top:12px;font-size:13px;color:var(--text)">
+            Envío en 24h • Cambios en 3 días • Pago seguro
+          </div>
+
+          <div style="margin-top:14px;border-top:1px solid var(--muted-border);padding-top:12px">
+            <h4>¿Interesado en comprar por mayoreo?</h4>
+            <p style="margin:6px 0;color:var(--text)">
+              Descuentos por volumen y personalización. Completa tus datos y te mandamos cotización.
+            </p>
+            <form class="b2b" id="b2b-form" onsubmit="submitB2B(event)">
+              <input name="name" placeholder="Nombre" required />
+              <input name="contact" placeholder="Teléfono" required style="margin-top:8px" />
+              <input name="qty" placeholder="Cantidad estimada" required style="margin-top:8px" />
+              <button class="btn-submit" style="margin-top:10px" type="submit">Solicitar cotización</button>
+            </form>
+          </div>
+        </aside>
+      </main>
+
+      <section style="margin-top:18px">
+        <div class="faq-grid">
+          <div class="faq">
+            <h4>Preguntas frecuentes</h4>
+            <ul style="margin-top:8px">
+              <li>¿Tienen tallas especiales? Sí, bajo pedido.</li>
+              <li>¿Envían a todo el país? No por el momento.</li>
+              <li>¿Cuál es el tiempo de entrega? 24 horas (Celaya, Guanajuato).</li>
+            </ul>
+          </div>
+          <div class="faq">
+            <h4>Contacto</h4>
+            <p style="margin-top:8px">
+              WhatsApp: +52 1 461 150 6608<br>
+              Facebook: /Andy's Closet Plateria, accesorios y uniformes para personal de salud
+            </p>
+          </div>
+          <div class="faq">
+            <h4>Políticas</h4>
+            <p style="margin-top:8px">
+              Devoluciones y cambios en 3 días. Consulte términos y condiciones.
+            </p>
           </div>
         </div>
+      </section>
 
-        <div style="margin-top:12px">
-          <label class="sr-only">Color</label>
-          <div class="colors">
-            <div class="color-swatch" style="background:var(--primary)"></div>
-            <div class="color-swatch" style="background:#cb4c7d"></div>
-            <div class="color-swatch" style="background:#111827"></div>
-          </div>
+      <div style="height:36px"></div>
+
+      <footer>
+        <div class="wrap" style="padding:12px 20px">
+          2025 Andy’s Closet Plateria, accesorios y uniformes para personal de salud™
         </div>
+      </footer>
 
-        <div class="cta"> 
-          <button class="btn btn-primary" onclick="openWhatsAppPrefill()">Comprar con WhatsApp</button>
-          <button class="btn" onclick="alert('Integrar pasarela de pago o link de pago')">Anadir a favoritos</button>
-        </div>
-
-        <div style="margin-top:12px;font-size:13px;color:var(--text)">Envío en 24h • Cambios en 3 días • Pago seguro</div>
-
-        <div style="margin-top:14px;border-top:1px solid var(--muted-border);padding-top:12px">
-          <h4>¿Interesado en comprar por mayoreo?</h4>
-          <p style="margin:6px 0;color:var(--text)">Descuentos por volumen y personalización. Completa tus datos y te mandamos cotización.</p>
-          <form class="b2b" id="b2b-form" onsubmit="submitB2B(event)">
-            <input name="name" placeholder="Nombre" required />
-            <input name="contact" placeholder="teléfono" required style="margin-top:8px" />
-            <input name="qty" placeholder="Cantidad estimada" required style="margin-top:8px" />
-            <button class="btn-submit" style="margin-top:10px" type="submit">Solicitar cotización</button>
-          </form>
-        </div>
-      </aside>
-    </main>
-
-    <section style="margin-top:18px">
-      <div class="faq-grid">
-        <div class="faq"><h4>Preguntas frecuentes</h4><ul style="margin-top:8px"><li>¿Tienen tallas especiales? Sí, bajo pedido.</li><li>¿Envían a todo el país? No por el momento.</li><li>¿Cuál es el tiempo de entrega? 24 horas (Celaya, Guanajuato).</li></ul></div>
-        <div class="faq"><h4>Contacto</h4><p style="margin-top:8px">WhatsApp: +52 1 461 150 6608<br>Facebook: /Andy's Closet Plateria, accesorios y uniformes para personal de salud</p></div>
-        <div class="faq"><h4>Políticas</h4><p style="margin-top:8px">Devoluciones y cambios en 3 días. Consulte terminos y condiciones.</p></div>
-      </div>
-    </section>
-
-    <div style="height:36px"></div>
-
-    <footer>
-      <div class="wrap" style="padding:12px 20px">2025 Andy’s Closet Plateria, accesorios y uniformes para personal de salud™</div>
-    </footer>
-
-  </div>
-
-  <!-- Sticky mobile CTA -->
-  <div class="mobile-stick" role="dialog" aria-live="polite">
-    <div class="bar">
-      <div>
-        <div style="font-weight:700">Nueva coleccion — Sonrisas en tela</div>
-        <div style="font-size:12px">$699 MXN • Envío 24h</div>
-      </div>
-      <div><button class="btn-accent" onclick="openWhatsAppPrefill()">Comprar</button></div>
     </div>
-  </div>
-
-  <script>
-    function openWhatsApp(){
-      const phone = '+524611506608'; // reemplaza con número real
-      const url = `https://wa.me/${phone.replace(/\D/g,'')}`;
-      window.open(url,'_blank');
-    }
-    function openWhatsAppPrefill(){
-      const phone = '+524611506608'; // reemplaza con número real
-      const text = encodeURIComponent('Hola, quiero la filipina Classic Slim, talla M. Vengo desde su pagina web.');
-      const url = `https://wa.me/${phone.replace(/\D/g,'')}?text=${text}`;
-      window.open(url,'_blank');
-    }
-
-    function scrollToB2B(){
-      document.getElementById('b2b-form').scrollIntoView({behavior:'smooth', block: 'center'});
-    }
-
-    function submitB2B(e){
-      e.preventDefault();
-      const f = e.target;
-      // Aquí conectar con tu backend o servicio (Zapier/Sheets/Email)
-      alert('Gracias — hemos recibido tu solicitud. Te responderemos en menos de 12h.');
-      f.reset();
-    }
-
-  </script>
-</body>
+  </body>
 </html>
